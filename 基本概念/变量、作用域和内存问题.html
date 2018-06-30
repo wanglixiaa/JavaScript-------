@@ -48,8 +48,13 @@
     <p id="message"></p>
     
 </p>
+  <p><span>***看下p74的作用域链图4-3（全局环境里有变量color和函数changeColor()。changeColor()的局部环境中有一个变量anotherColor和一个名为swapColor()的函数，但他也可以访问全局中烦人变量color</span></p>
   <h3>没有块级作用域</h3>
   <p>导致定义在花括号封闭的代码块中的变量可以在全局环境中使用</p>
+  <p>访问局部变量要比访问全局变量快</p>
+  <h3>垃圾收集</h3>
+  <p>方法1:标记清除（垃圾收集qi）</p>
+  <p>方法2:引用计数</p>
 <script>
   function myFunction() {
     var message, x;
