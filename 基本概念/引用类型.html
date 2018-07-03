@@ -12,6 +12,7 @@
 </head>
 <body>
   <h1>引用类型</h1>
+  <h4>几种引用类型，实例，实例属性。构造函数属性、构造函数关系</h4>
   <h3>Object类型</h3>
   <p>我们看到的大多数引用类型值都是Object类型的实例</p>
   <p>创建Object实例的方式一：使用new操作符后跟Object构造函数；方式二：使用对象字面量表示法</p>
@@ -72,14 +73,44 @@
   <p>模式中使用的元字符都必须转义，正则中的元字符包括：( [ { \ ^ $ | ) ? * + . ] }</p>
   <p>字符串字面量形式来定义正则表达式：var aa=/[bc]at/i</p>
   <p>使用构造函数来创建正则表达式：var aa=new RegExp("[bc]at","i");</p>
-  <h3>RegExp实例属性</h3>
+  <h4>RegExp实例属性</h4>
   <li>global:true/false</li>
   <li>ignoreCase:true/false</li>
   <li>lastIndex:整数，表示开始搜索下一个匹配项的字符串位置，从0算起</li>
   <li>multiline:true/false</li>
   <li><span>source:正则表达式的字符串表示，两种模式的source属性是相同的，source属性保存的是规范形式的字符串，即字面量形式所用的字符串</span></li>
-  <h3>RegExp实例方法</h3>
+  <h4>RegExp实例方法</h4>
   <p><span>查看各元字符的表达意思<a href="http://www.runoob.com/regexp/regexp-metachar.html">http://www.runoob.com/regexp/regexp-metachar.html</a></span></p>
+  <h4>exec()方法 该方法专门为捕获组而设计的</h4>
+  <p>"do(es)?"可匹配"do"或"does"</p>
+  <h4>test()方法 ，接受一个字符串参数。在模式与该参数匹配的情况下返回true,否则返回false.</h4>
+  <p>var text="000-00-0000";<br>
+    var pattern=/\d{3}-\d{2}-\d{4}/;<br>
+    if (patten.test(text)){alert("matched")};}
+  </p>
+  <h4>RegExp构造函数属性p107</h4>
+  <h3>Function类型</h3>
+  <p>函数名是一个指向函数对象的指针，不会与哪个函数绑定，与其他引用类型一样具有属性和方法</p>
+  <p><span>使用不带圆括号的函数名是访问函数指针而非调用函数,一个函数可以有多个名字</span></p>
+  <p>定义函数的3种方式：函数生命、函数表达式、使用Function构造函数</p>
+  <h4>没有重载</h4>
+  <p>就是不能有两个同名函数名，要不然后者会覆盖前者</p>
+  <h4>函数声明和函数表达式</h4>
+  <p>函数声明会有函数声明提升过程，就是可以在定义函数之前调用函数</p>
+  <p>函数表达式方式定义的函数 除了可以通过变量访问函数这一点，函数声明与函数表达式的语法其实是等价的</p>
+  <p>也可以同时适应函数声明和函数表达式，但是Safari中会导致错误，例如var sum=function sum(){}<span>不要这样写</span></p>
+  <h4>作为值的函数</h4>
+  <p>可以像传递参数一样把一个函数传递给另一个函数，也可以将一个函数作为另一个函数的结果返回</p>
+  <p>要访问函数的指针而不执行函数的话需要去掉函数名后面的指针</p>
+  <h4>函数内部属性</h4>
+  <p>callee</p>
+  <p>var obj={<br>
+      color:"red",<br>
+      sayColor:function(){alert(this.color)}}<span>this引用的是对象obj,相当于obj.color 这样的说法准确吗？感觉不准确</span></p>
+  <p>分清arguments.caller和函数的caller属性，前者可以表示函数的指针，在函数里表示函数指针。后者保存着调用当前函数的函数的引用</p>
+  <h4>函数属性和方法</h4>
+  <p>length和prototype</p>
+
 
 </body>
 </html> 
