@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <title>Document</title>
+    <style>
+      span{color:red;}
+    </style>
+</head>
+<body>
+  <h1>面向对象的程序设计</h1>
+  <h3>属性类型</h3>
+  <p>像这样（ var obj = new Object(); obj.name = "percy"; ）或者像通过对象字面量（ var obj = {name: "percy"}; ）直接在对象上定义的属性，它们的 [[Configurable]]、[[Enumerable]] 和 [[Writable]] 特性默认都被设置为 true，而 [[Value]] 特性被设置为指定的值。</p>
+  <p>没有按上面的2种方法为对象添加属性，而直接通过 Object.defineProperty() 为对象添加属性以及值，这种情况下，这个对象的这个属性的另外3个特性的默认值都是 false。就是不能通过obj.name="fff"来改变属性</p>
+  <p><a href="https://www.zhihu.com/question/40648241">https://www.zhihu.com/question/40648241</a></p>
+  <h4>数据属性</h4>
+  <h4>访问器属性</h4>
+  <h3>创建对象</h3>
+  <h4>工厂模式</h4>
+  <h4>构造函数模式</h4>
+  <p>将构造函数的作用域赋给新对象，this就指向这个新对象</p>
+  <table class="table table-bordered">
+      <tr>
+        <th>创建对象方式</th>
+        <th>优点</th>
+        <th>缺点</th>
+      </tr>
+      <tr>
+        <th>工厂模式</th>
+        <th>可以创建多个相似对象</th>
+        <th>未解决对象识别问题，即怎么知道一个对象的类型</th>
+      </tr>
+      <tr>
+        <th>构造函数模式</th>
+        <th>没有显示地创建对象；直接将属性和方法赋给hthis对象；没有return语句</th>
+        <th>false</th>
+      </tr>
+      <tr>
+        <th>原型模式</th>
+        <th></th>
+        <th></th>
+      </tr>
+      <tr>
+        <th>组合使用构造函数模式和原型模式</th>
+        <th></th>
+        <th></th>
+      </tr>
+      <tr>
+        <th>动态原型模式</th>
+        <th></th>
+        <th></th>
+      </tr>
+      <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </table>
+    <span class="ff" onclick="fff()">dddd</span>
+    <a href="http://www.baidu.com" target="_blank">ddd</a>
+    <script>
+       var ww=document.getElementsByClassName("ff");
+//        ww.onclick=fff(2);
+//        function fff(num){
+//          for(var i=0;i<num;i++){
+//            console.log(i)
+//          }
+//          alert(i);
+// }
+// ww.onclick=fff(9);
+//        function fff(num){
+//         for(i=2;i<num;i++){
+//           if(num%i==0){return false;}
+//           else{return true;}
+//         }  
+//       }
+function fff(){
+  window.open("http://wwww.wrox.com/","_blank ","height=400,width=500,top=20,resizable=yes");
+}
+    </script>
+</body>
+</html> 
